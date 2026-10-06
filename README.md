@@ -23,7 +23,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Configure `MONGODB_URI` no arquivo `.env`. Para usar o MongoDB Atlas, informe a string de conexão fornecida pelo Atlas.
+Copie `.env.example` para `.env` e configure `MONGODB_URI` com a string de conexão do MongoDB Atlas. Em produção, configure `PORT` e `MONGODB_URI` nas variáveis de ambiente do serviço.
 
 ## Rotas
 
@@ -34,6 +34,8 @@ Configure `MONGODB_URI` no arquivo `.env`. Para usar o MongoDB Atlas, informe a 
 | POST | /produtos | Cria um produto |
 | PUT | /produtos/:id | Atualiza um produto |
 | DELETE | /produtos/:id | Exclui um produto |
+
+| GET | /produtos/buscar?termo=teclado | Busca por nome ou ID |
 
 ## Exemplo de JSON
 
